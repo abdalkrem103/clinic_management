@@ -1,0 +1,176 @@
+/* شبكة خريطة الأسنان */
+.dental-chart-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.teeth-row {
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  gap: 10px;
+  margin: 12px 0;
+}
+
+.tooth-grid {
+  width: 38px;
+  height: 54px;
+  background: #f8f9fa;
+  border: 2px solid #ccc;
+  border-radius: 8px 8px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+}
+
+.tooth-grid:hover {
+  border-color: #007bff;
+  background: #e3f0ff;
+  transform: scale(1.08);
+}
+
+.tooth-grid.selected {
+  border-color: #28a745;
+  background: #e8f5e9;
+  box-shadow: 0 2px 8px rgba(40,167,69,0.08);
+}
+
+.tooth-grid.has-note {
+  border-color: #ffc107;
+  background: #fffbe6;
+}
+
+.tooth-number {
+  font-size: 1.1rem;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 6px;
+  margin-top: 6px;
+}
+
+.note-indicator {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  font-size: 1.1rem;
+}
+
+/* منطقة التفاصيل */
+.tooth-details-grid {
+  margin-top: 24px;
+  padding: 18px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 500px;
+  background: #f9f9f9;
+}
+
+.tooth-details-grid h3 {
+  margin: 0 0 16px 0;
+  color: #007bff;
+  text-align: center;
+}
+
+.note-section {
+  margin-bottom: 15px;
+}
+
+.note-section textarea {
+  width: 100%;
+  min-height: 80px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  resize: vertical;
+  font-size: 1rem;
+}
+
+.note-section button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+.note-section button:hover {
+  background: #0056b3;
+}
+
+.existing-note {
+  background: #fffbe6;
+  padding: 12px;
+  border-radius: 4px;
+  margin-top: 10px;
+  border: 1px solid #ffe082;
+}
+
+.existing-note h4 {
+  margin: 0 0 8px 0;
+  color: #b8860b;
+}
+
+.existing-note p {
+  margin: 0 0 8px 0;
+  color: #666;
+}
+
+.existing-note small {
+  color: #999;
+  font-size: 12px;
+}
+
+.tooth-status-icon {
+  font-size: 1.5rem;
+  display: block;
+  text-align: center;
+  margin: 0 auto 2px auto;
+  line-height: 1.2;
+}
+
+.tooth-fdi-label {
+  font-size: 1rem;
+  color: #888;
+  margin-right: 8px;
+}
+
+@media (max-width: 900px) {
+  .teeth-row {
+    grid-template-columns: repeat(16, 1fr);
+    gap: 6px;
+  }
+  .tooth-grid {
+    width: 28px;
+    height: 38px;
+  }
+}
+
+@media (max-width: 600px) {
+  .dental-chart-grid {
+    padding: 8px;
+  }
+  .teeth-row {
+    gap: 2px;
+  }
+  .tooth-grid {
+    width: 20px;
+    height: 28px;
+    font-size: 0.8rem;
+  }
+} 

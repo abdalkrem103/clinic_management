@@ -1,0 +1,26 @@
+.reports-container {
+    padding: 20px;
+    text-align: center;
+}
+
+.report-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.report-buttons button {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.report-buttons button:hover {
+    background-color: #5a6268;
+}

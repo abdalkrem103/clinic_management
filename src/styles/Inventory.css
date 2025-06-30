@@ -1,0 +1,194 @@
+.inventory-container {
+    padding: 2rem;
+    direction: rtl;
+    background-color: #f9fafb;
+    min-height: 100vh;
+}
+
+.inventory-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.inventory-header h1 {
+    color: #1f2937;
+    margin: 0;
+}
+
+.add-item-btn {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background-color 0.3s;
+}
+
+.add-item-btn:hover {
+    background-color: #1d4ed8;
+}
+
+.add-item-form {
+    display: flex;
+    gap: 1rem;
+    padding: 1.5rem;
+    background-color: white;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.add-item-form input {
+    flex: 1;
+    padding: 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.add-item-form button {
+    background-color: #16a34a;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.add-item-form button:hover {
+    background-color: #15803d;
+}
+
+.inventory-table-wrapper {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    overflow: hidden;
+}
+
+.inventory-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.inventory-table th,
+.inventory-table td {
+    padding: 1rem 1.25rem;
+    text-align: right;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.inventory-table thead th {
+    background-color: #2563eb;
+    color: white;
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+}
+
+.inventory-table tbody tr:hover {
+    background-color: #f3f4f6;
+}
+
+.low-stock {
+    background-color: #fef2f2;
+}
+.low-stock:hover {
+    background-color: #fee2e2 !important;
+}
+.low-stock td:first-child {
+    font-weight: bold;
+    color: #b91c1c;
+}
+
+.status-badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.status-ok {
+    background-color: #dcfce7;
+    color: #16a34a;
+}
+
+.status-low {
+    background-color: #fee2e2;
+    color: #dc2626;
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    justify-content: center;
+}
+
+.quantity-controls span {
+    font-weight: 600;
+    min-width: 30px;
+    text-align: center;
+}
+
+.quantity-controls button {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 1px solid #d1d5db;
+    background-color: white;
+    color: #1f2937;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.quantity-controls button:hover {
+    background-color: #f3f4f6;
+}
+
+.quantity-controls button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.actions-cell {
+    text-align: left;
+}
+
+.action-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px 8px;
+    font-size: 1.1rem;
+    transition: transform 0.2s, color 0.2s;
+}
+
+.action-btn:hover {
+    transform: scale(1.2);
+}
+
+.delete-btn {
+    color: #e74c3c;
+}
+
+.delete-btn:hover {
+    color: #c0392b;
+}

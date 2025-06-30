@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+
+/* ألوان مقترحة لعيادة أسنان: #007BFF (أزرق أساسي), #E9ECEF (رمادي فاتح للخلفيات), #FFFFFF (أبيض), #495057 (نص غامق), #28A745 (أخضر للنجاح), #DC3545 (أحمر للخطأ/الإلغاء) */
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #e9ecef; /* خلفية رمادية فاتحة */
+  color: #495057; /* لون النص الأساسي */
+}
+
+.clinic-public {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 20px;
+  background-color: #ffffff; /* خلفية بيضاء للمحتوى */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden; /* لمنع تجاوز العناصر ذات الهوامش السالبة */
+}
+
+.clinic-header {
+  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+  color: white;
+  padding: 2rem 1rem;
+  border-radius: 0 0 30px 30px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.header-top {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 2rem;
+  position: absolute;
+  top: 1rem;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+
+.auth-buttons, .patient-info {
+  display: flex;
+  gap: 1rem;
+}
+
+.auth-buttons button, .patient-info button {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 1px solid white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.auth-buttons button:hover, .patient-info button:hover {
+  background-color: white;
+  color: #007bff;
+}
+
+.patient-dashboard-btn span {
+  font-weight: bold;
+}
+
+.header-content {
+  padding-top: 4rem; /* مساحة للأزرار في الأعلى */
+}
+
+.header-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.header-content p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+section {
+  margin-bottom: 40px;
+  padding: 0 20px;
+}
+
+section h2 {
+  text-align: center;
+  color: #007bff; /* أزرق للعناوين */
+  margin-bottom: 30px;
+  font-size: 2em;
+  position: relative;
+}
+
+section h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #007bff;
+  margin: 10px auto 0;
+}
+
+.services-grid, .doctors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.service-card, .doctor-card, .contact-card {
+  background-color: #f8f9fa; /* خلفية رمادية فاتحة للبطاقات */
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover, .doctor-card:hover, .contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.service-card i, .contact-card i {
+  color: #007bff; /* أيقونات زرقاء */
+  font-size: 3em;
+  margin-bottom: 15px;
+}
+
+.service-card h3, .doctor-card h3, .contact-card h3 {
+  color: #343a40; /* عناوين البطاقات بلون أغمق */
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.service-card p, .doctor-card p, .contact-card p {
+  font-size: 0.95em;
+  line-height: 1.6;
+}
+
+.doctor-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 3px solid #007bff;
+}
+
+.doctor-card .specialty {
+  font-style: italic;
+  color: #007bff;
+  margin-bottom: 5px;
+}
+
+.doctor-card .experience, .doctor-card .working-hours {
+  font-size: 0.9em;
+  color: #6c757d;
+}
+
+.booking-intro {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.booking-intro p {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+}
+
+.booking-options {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.book-btn {
+  background-color: #28a745; /* أخضر لزر الحجز */
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.book-btn:hover {
+  background-color: #218838; /* درجة أغمق عند التحويم */
+}
+
+/* تأثير النبض لزر الحجز */
+.pulse-button {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.7); /* أخضر */
+  }
+  70% {
+    box-shadow: 0 0 0 20px rgba(40, 167, 69, 0); /* أخضر */
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(40, 167, 69, 0); /* أخضر */
+  }
+}
+
+.contact-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.contact-card h3 {
+  margin-bottom: 5px;
+}
+
+.contact-card p {
+  margin-top: 0;
+  font-weight: bold;
+  color: #007bff; /* لون أزرق لمعلومات الاتصال الهامة */
+}
+
+/* Loader and Error styles */
+.loading-container, .error-container {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.loading, .error-message {
+  font-size: 1.5em;
+  color: #007bff;
+}
+
+.error-message {
+  color: #dc3545; /* أحمر للخطأ */
+}
+
+.retry-message {
+  margin-top: 15px;
+  font-size: 1em;
+  color: #6c757d;
+}
+
+.retry-button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.retry-button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .clinic-header h1 {
+    font-size: 2em;
+  }
+
+  .clinic-header p {
+    font-size: 1em;
+  }
+
+  section h2 {
+    font-size: 1.8em;
+  }
+
+  .service-card, .doctor-card, .contact-card {
+    padding: 15px;
+  }
+
+  .service-card i, .contact-card i {
+    font-size: 2.5em;
+  }
+
+  .doctor-image {
+    width: 80px;
+    height: 80px;
+  }
+
+  .book-btn {
+    padding: 12px 25px;
+    font-size: 1.1em;
+  }
+}
+
+@media (max-width: 480px) {
+  .clinic-public {
+    margin: 10px auto;
+    padding: 0 10px;
+  }
+
+  section {
+    padding: 0 10px;
+    margin-bottom: 30px;
+  }
+
+  .clinic-header {
+    padding: 30px 10px;
+  }
+
+  .clinic-header h1 {
+    font-size: 1.8em;
+  }
+
+  .service-card, .doctor-card, .contact-card {
+    padding: 10px;
+  }
+
+  .service-card i, .contact-card i {
+    font-size: 2em;
+  }
+
+  .doctor-image {
+    width: 60px;
+    height: 60px;
+  }
+
+  .book-btn {
+    padding: 10px 20px;
+    font-size: 1em;
+  }
+
+  .booking-options {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+.auth-buttons-floating {
+  display: none; /* إخفاء الأزرار العائمة القديمة */
+}
+
+.welcome-card {
+  display: none; /* إخفاء بطاقة الترحيب القديمة */
+}
+
+.divider {
+  width: 90%;
+  height: 2px;
+  background: linear-gradient(90deg, #007bff 0%, #28a745 100%);
+  margin: 0 auto 32px auto;
+  border-radius: 2px;
+  opacity: 0.15;
+}
+
+.clinic-public-container {
+    padding: 2rem;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+    direction: rtl;
+} 

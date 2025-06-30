@@ -1,0 +1,129 @@
+.patient-dashboard {
+    padding: 2rem;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+    direction: rtl;
+}
+
+.dashboard-header {
+    text-align: right;
+    margin-bottom: 2.5rem;
+    padding-right: 1rem;
+    border-right: 5px solid #007bff;
+}
+
+.dashboard-header h1 {
+    color: #343a40;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.dashboard-header p {
+    color: #6c757d;
+    font-size: 1.1rem;
+}
+
+.dashboard-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+    padding: 2rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+    color: #007bff;
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.7rem;
+    position: relative;
+}
+
+.card h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50px;
+    height: 3px;
+    background-color: #007bff;
+    border-radius: 2px;
+}
+
+.profile-details p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #495057;
+}
+
+.profile-details p strong {
+    color: #343a40;
+    margin-left: 8px;
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+.appointments-table, .payments-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.appointments-table th, .appointments-table td,
+.payments-table th, .payments-table td {
+    padding: 0.75rem 1rem;
+    text-align: right;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.appointments-table th, .payments-table th {
+    background-color: #f8f9fa;
+    color: #495057;
+    font-weight: 600;
+}
+
+.status-badge {
+    padding: 0.25em 0.6em;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    color: #fff;
+    text-transform: capitalize;
+}
+
+.status-confirmed { background-color: #28a745; }
+.status-pending { background-color: #ffc107; color: #212529; }
+.status-cancelled { background-color: #dc3545; }
+.status-completed { background-color: #6c757d; }
+
+.btn-cancel {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-cancel:hover {
+    background-color: #c82333;
+}
+
+.loading-container, .error-container {
+    text-align: center;
+    padding: 3rem;
+    font-size: 1.2rem;
+} 

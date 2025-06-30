@@ -1,0 +1,144 @@
+.admin-dashboard {
+  min-height: 100vh;
+  background: #f7f7fa;
+  direction: rtl;
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-dashboard-no-sidebar {
+  padding: 0;
+}
+
+.admin-main {
+  flex: 1;
+  padding: 40px 0 0 0;
+  background: #f7f7fa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.admin-home {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.admin-welcome {
+  text-align: center;
+  margin-bottom: 50px;
+  padding: 40px 20px 30px 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(102, 126, 234, 0.10);
+}
+
+.admin-welcome h1 {
+  color: #fff;
+  font-size: 38px;
+  font-weight: 800;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+.admin-welcome p {
+  color: #e0e0e0;
+  font-size: 20px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.admin-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 32px;
+  margin-top: 30px;
+}
+
+.admin-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 38px 24px 32px 24px;
+  text-decoration: none;
+  color: #2c3e50;
+  box-shadow: 0 8px 32px rgba(102, 126, 234, 0.10);
+  transition: all 0.25s cubic-bezier(.4,2,.6,1);
+  border: 2px solid transparent;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.admin-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 16px 48px rgba(102, 126, 234, 0.18);
+  border-color: #764ba2;
+  color: #764ba2;
+  text-decoration: none;
+}
+
+.card-icon {
+  font-size: 56px;
+  margin-bottom: 22px;
+  display: block;
+  color: #667eea;
+  transition: color 0.2s;
+}
+
+.admin-card:hover .card-icon {
+  color: #764ba2;
+}
+
+.admin-card h3 {
+  color: #2c3e50;
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  letter-spacing: 0.5px;
+  transition: color 0.2s;
+}
+
+.admin-card p {
+  color: #666;
+  font-size: 17px;
+  line-height: 1.6;
+  margin: 0;
+  transition: color 0.2s;
+}
+
+.admin-card:hover h3,
+.admin-card:hover p {
+  color: #764ba2;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .admin-cards {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .admin-welcome h1 {
+    font-size: 28px;
+  }
+  .admin-welcome p {
+    font-size: 16px;
+  }
+}
+@media (max-width: 600px) {
+  .admin-cards {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .admin-main {
+    padding: 20px 0 0 0;
+  }
+  .admin-welcome {
+    padding: 24px 8px 18px 8px;
+  }
+} 
